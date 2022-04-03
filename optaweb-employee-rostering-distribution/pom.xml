@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.optaweb.employeerostering</groupId>
+    <artifactId>optaweb-employee-rostering</artifactId>
+    <version>8.19.0.Final</version>
+  </parent>
+
+  <artifactId>optaweb-employee-rostering-distribution</artifactId>
+  <packaging>pom</packaging>
+
+  <name>OptaWeb Employee Rostering as a Service Distribution</name>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>package-sources</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/assembly/assembly-optaweb-employee-rostering-sources.xml</descriptor>
+              </descriptors>
+              <appendAssemblyId>false</appendAssemblyId>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!-- Documentation -->
+    <dependency>
+      <groupId>org.optaweb.employeerostering</groupId>
+      <artifactId>optaweb-employee-rostering-docs</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>org.optaweb.employeerostering</groupId>
+      <artifactId>optaweb-employee-rostering-standalone</artifactId>
+      <classifier>quarkus-app</classifier>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
+</project>

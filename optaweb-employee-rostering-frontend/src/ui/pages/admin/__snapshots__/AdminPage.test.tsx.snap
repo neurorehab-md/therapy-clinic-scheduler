@@ -1,0 +1,1375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Admin Page should close the modal when the modal is closed 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={2}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should display modal when the Add Tenant button is clicked 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={true}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={2}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should filter by name 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText="5"
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 14,
+          "name": "Tenant 15",
+          "version": 0,
+        },
+        Object {
+          "id": 4,
+          "name": "Tenant 5",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "?filter=5",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "?filter=5",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={2}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 14,
+          "name": "Tenant 15",
+          "version": 0,
+        },
+        Object {
+          "id": 4,
+          "name": "Tenant 5",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should go to the correct page when the page is changed 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 9,
+          "name": "Tenant 10",
+          "version": 0,
+        },
+        Object {
+          "id": 10,
+          "name": "Tenant 11",
+          "version": 0,
+        },
+        Object {
+          "id": 11,
+          "name": "Tenant 12",
+          "version": 0,
+        },
+        Object {
+          "id": 12,
+          "name": "Tenant 13",
+          "version": 0,
+        },
+        Object {
+          "id": 13,
+          "name": "Tenant 14",
+          "version": 0,
+        },
+        Object {
+          "id": 14,
+          "name": "Tenant 15",
+          "version": 0,
+        },
+        Object {
+          "id": 15,
+          "name": "Tenant 16",
+          "version": 0,
+        },
+        Object {
+          "id": 16,
+          "name": "Tenant 17",
+          "version": 0,
+        },
+        Object {
+          "id": 17,
+          "name": "Tenant 18",
+          "version": 0,
+        },
+        Object {
+          "id": 18,
+          "name": "Tenant 19",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+        Object {
+          "id": 19,
+          "name": "Tenant 20",
+          "version": 0,
+        },
+        Object {
+          "id": 2,
+          "name": "Tenant 3",
+          "version": 0,
+        },
+        Object {
+          "id": 3,
+          "name": "Tenant 4",
+          "version": 0,
+        },
+        Object {
+          "id": 4,
+          "name": "Tenant 5",
+          "version": 0,
+        },
+        Object {
+          "id": 5,
+          "name": "Tenant 6",
+          "version": 0,
+        },
+        Object {
+          "id": 6,
+          "name": "Tenant 7",
+          "version": 0,
+        },
+        Object {
+          "id": 7,
+          "name": "Tenant 8",
+          "version": 0,
+        },
+        Object {
+          "id": 8,
+          "name": "Tenant 9",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "?page=2",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "?page=2",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={20}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={2}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 18,
+          "name": "Tenant 19",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+        Object {
+          "id": 19,
+          "name": "Tenant 20",
+          "version": 0,
+        },
+        Object {
+          "id": 2,
+          "name": "Tenant 3",
+          "version": 0,
+        },
+        Object {
+          "id": 3,
+          "name": "Tenant 4",
+          "version": 0,
+        },
+        Object {
+          "id": 4,
+          "name": "Tenant 5",
+          "version": 0,
+        },
+        Object {
+          "id": 5,
+          "name": "Tenant 6",
+          "version": 0,
+        },
+        Object {
+          "id": 6,
+          "name": "Tenant 7",
+          "version": 0,
+        },
+        Object {
+          "id": 7,
+          "name": "Tenant 8",
+          "version": 0,
+        },
+        Object {
+          "id": 8,
+          "name": "Tenant 9",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should render correctly with 2 tenants 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={2}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should render correctly with many tenants 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 9,
+          "name": "Tenant 10",
+          "version": 0,
+        },
+        Object {
+          "id": 10,
+          "name": "Tenant 11",
+          "version": 0,
+        },
+        Object {
+          "id": 11,
+          "name": "Tenant 12",
+          "version": 0,
+        },
+        Object {
+          "id": 12,
+          "name": "Tenant 13",
+          "version": 0,
+        },
+        Object {
+          "id": 13,
+          "name": "Tenant 14",
+          "version": 0,
+        },
+        Object {
+          "id": 14,
+          "name": "Tenant 15",
+          "version": 0,
+        },
+        Object {
+          "id": 15,
+          "name": "Tenant 16",
+          "version": 0,
+        },
+        Object {
+          "id": 16,
+          "name": "Tenant 17",
+          "version": 0,
+        },
+        Object {
+          "id": 17,
+          "name": "Tenant 18",
+          "version": 0,
+        },
+        Object {
+          "id": 18,
+          "name": "Tenant 19",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+        Object {
+          "id": 19,
+          "name": "Tenant 20",
+          "version": 0,
+        },
+        Object {
+          "id": 2,
+          "name": "Tenant 3",
+          "version": 0,
+        },
+        Object {
+          "id": 3,
+          "name": "Tenant 4",
+          "version": 0,
+        },
+        Object {
+          "id": 4,
+          "name": "Tenant 5",
+          "version": 0,
+        },
+        Object {
+          "id": 5,
+          "name": "Tenant 6",
+          "version": 0,
+        },
+        Object {
+          "id": 6,
+          "name": "Tenant 7",
+          "version": 0,
+        },
+        Object {
+          "id": 7,
+          "name": "Tenant 8",
+          "version": 0,
+        },
+        Object {
+          "id": 8,
+          "name": "Tenant 9",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={20}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 9,
+          "name": "Tenant 10",
+          "version": 0,
+        },
+        Object {
+          "id": 10,
+          "name": "Tenant 11",
+          "version": 0,
+        },
+        Object {
+          "id": 11,
+          "name": "Tenant 12",
+          "version": 0,
+        },
+        Object {
+          "id": 12,
+          "name": "Tenant 13",
+          "version": 0,
+        },
+        Object {
+          "id": 13,
+          "name": "Tenant 14",
+          "version": 0,
+        },
+        Object {
+          "id": 14,
+          "name": "Tenant 15",
+          "version": 0,
+        },
+        Object {
+          "id": 15,
+          "name": "Tenant 16",
+          "version": 0,
+        },
+        Object {
+          "id": 16,
+          "name": "Tenant 17",
+          "version": 0,
+        },
+        Object {
+          "id": 17,
+          "name": "Tenant 18",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should render correctly with no tenants 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={Immutable.List []}
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={0}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={Immutable.List []}
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should show confirm dialog when the reset button is clicked 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={true}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={10}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={2}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;
+
+exports[`Admin Page should show the desired number of tenants per page 1`] = `
+<Fragment>
+  <Button
+    aria-label="Reset Application"
+    data-cy="reset-application"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "min-content",
+      }
+    }
+    variant="danger"
+  >
+    Trans(i18nKey=resetApplication)
+  </Button>
+  <ConfirmDialog
+    isOpen={false}
+    onClose={[Function]}
+    onConfirm={[Function]}
+    title="Trans(i18nKey=confirmResetTitle)"
+  >
+    Trans(i18nKey=confirmResetBody)
+  </ConfirmDialog>
+  <Connect(NewTenantFormModal)
+    aria-label="Add Tenant Modal"
+    isOpen={false}
+    onClose={[Function]}
+  />
+  <DataTable
+    columns={
+      Array [
+        Object {
+          "name": "Trans(i18nKey=name)",
+          "sorter": [Function],
+        },
+      ]
+    }
+    filterText=""
+    filteredRows={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 9,
+          "name": "Tenant 10",
+          "version": 0,
+        },
+        Object {
+          "id": 10,
+          "name": "Tenant 11",
+          "version": 0,
+        },
+        Object {
+          "id": 11,
+          "name": "Tenant 12",
+          "version": 0,
+        },
+        Object {
+          "id": 12,
+          "name": "Tenant 13",
+          "version": 0,
+        },
+        Object {
+          "id": 13,
+          "name": "Tenant 14",
+          "version": 0,
+        },
+        Object {
+          "id": 14,
+          "name": "Tenant 15",
+          "version": 0,
+        },
+        Object {
+          "id": 15,
+          "name": "Tenant 16",
+          "version": 0,
+        },
+        Object {
+          "id": 16,
+          "name": "Tenant 17",
+          "version": 0,
+        },
+        Object {
+          "id": 17,
+          "name": "Tenant 18",
+          "version": 0,
+        },
+        Object {
+          "id": 18,
+          "name": "Tenant 19",
+          "version": 0,
+        },
+        Object {
+          "id": 1,
+          "name": "Tenant 2",
+          "version": 0,
+        },
+        Object {
+          "id": 19,
+          "name": "Tenant 20",
+          "version": 0,
+        },
+        Object {
+          "id": 2,
+          "name": "Tenant 3",
+          "version": 0,
+        },
+        Object {
+          "id": 3,
+          "name": "Tenant 4",
+          "version": 0,
+        },
+        Object {
+          "id": 4,
+          "name": "Tenant 5",
+          "version": 0,
+        },
+        Object {
+          "id": 5,
+          "name": "Tenant 6",
+          "version": 0,
+        },
+        Object {
+          "id": 6,
+          "name": "Tenant 7",
+          "version": 0,
+        },
+        Object {
+          "id": 7,
+          "name": "Tenant 8",
+          "version": 0,
+        },
+        Object {
+          "id": 8,
+          "name": "Tenant 9",
+          "version": 0,
+        },
+      ]
+    }
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [MockFunction],
+        "createHref": [MockFunction],
+        "go": [MockFunction],
+        "goBack": [MockFunction],
+        "goForward": [MockFunction],
+        "length": 1,
+        "listen": [MockFunction],
+        "location": Object {
+          "hash": "",
+          "pathname": "/admin",
+          "search": "?itemsPerPage=5",
+          "state": undefined,
+        },
+        "push": [MockFunction],
+        "replace": [MockFunction],
+      }
+    }
+    isReversed={false}
+    itemsPerPage={5}
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/admin",
+        "search": "?itemsPerPage=5",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/admin",
+        "url": "localhost:8080/admin",
+      }
+    }
+    numOfFilteredRows={20}
+    onAddButtonClick={[Function]}
+    onSorterChange={[Function]}
+    page={1}
+    rowWrapper={[Function]}
+    rowsInPage={
+      Immutable.List [
+        Object {
+          "id": 0,
+          "name": "Tenant 1",
+          "version": 0,
+        },
+        Object {
+          "id": 9,
+          "name": "Tenant 10",
+          "version": 0,
+        },
+        Object {
+          "id": 10,
+          "name": "Tenant 11",
+          "version": 0,
+        },
+        Object {
+          "id": 11,
+          "name": "Tenant 12",
+          "version": 0,
+        },
+        Object {
+          "id": 12,
+          "name": "Tenant 13",
+          "version": 0,
+        },
+      ]
+    }
+    sortByIndex={0}
+    title="Trans(i18nKey=tenants)"
+  />
+</Fragment>
+`;

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plannerBenchmark>
+  <benchmarkDirectory>local/benchmarkReport</benchmarkDirectory>
+  <warmUpSecondsSpentLimit>30</warmUpSecondsSpentLimit>
+
+  <inheritedSolverBenchmark>
+    <solver>
+      <solutionClass>org.optaweb.employeerostering.domain.roster.Roster</solutionClass>
+      <entityClass>org.optaweb.employeerostering.domain.shift.Shift</entityClass>
+
+      <scoreDirectorFactory>
+        <scoreDrl>org/optaweb/employeerostering/service/solver/employeeRosteringScoreRules.drl</scoreDrl>
+        <!--<constraintProviderClass>org.optaweb.employeerostering.service.solver.EmployeeRosteringConstraintProvider</constraintProviderClass>-->
+      </scoreDirectorFactory>
+
+      <termination>
+        <secondsSpentLimit>10</secondsSpentLimit>
+      </termination>
+    </solver>
+  </inheritedSolverBenchmark>
+
+  <solverBenchmark>
+    <name>Default</name>
+    <!-- Intentionally empty for default solver -->
+    <solver>
+    </solver>
+  </solverBenchmark>
+
+  <solverBenchmark>
+    <name>Move Selector and Pillar Move Selector</name>
+    <solver>
+      <localSearch>
+        <unionMoveSelector>
+          <changeMoveSelector/>
+          <swapMoveSelector/>
+          <pillarChangeMoveSelector>
+            <pillarSelector>
+              <minimumSubPillarSize>1</minimumSubPillarSize>
+              <maximumSubPillarSize>10</maximumSubPillarSize>
+            </pillarSelector>
+          </pillarChangeMoveSelector>
+          <pillarSwapMoveSelector>
+            <pillarSelector>
+              <minimumSubPillarSize>1</minimumSubPillarSize>
+              <maximumSubPillarSize>10</maximumSubPillarSize>
+            </pillarSelector>
+          </pillarSwapMoveSelector>
+        </unionMoveSelector>
+      </localSearch>
+    </solver>
+  </solverBenchmark>
+
+  <solverBenchmark>
+    <name>Move Selector and Sequential Pillar Move Selector</name>
+    <solver>
+      <localSearch>
+        <unionMoveSelector>
+          <changeMoveSelector/>
+          <swapMoveSelector/>
+          <pillarChangeMoveSelector>
+            <subPillarType>SEQUENCE</subPillarType>
+            <subPillarSequenceComparatorClass>org.optaweb.employeerostering.solver.ShiftComparator</subPillarSequenceComparatorClass>
+            <pillarSelector>
+              <minimumSubPillarSize>1</minimumSubPillarSize>
+              <maximumSubPillarSize>10</maximumSubPillarSize>
+            </pillarSelector>
+          </pillarChangeMoveSelector>
+          <pillarSwapMoveSelector>
+            <subPillarType>SEQUENCE</subPillarType>
+            <subPillarSequenceComparatorClass>org.optaweb.employeerostering.solver.ShiftComparator</subPillarSequenceComparatorClass>
+            <pillarSelector>
+              <minimumSubPillarSize>1</minimumSubPillarSize>
+              <maximumSubPillarSize>10</maximumSubPillarSize>
+            </pillarSelector>
+          </pillarSwapMoveSelector>
+        </unionMoveSelector>
+      </localSearch>
+    </solver>
+  </solverBenchmark>
+</plannerBenchmark>

@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Validation Utils show list validation errors should render correctly 1`] = `
+<InputGroupText>
+  <Tooltip
+    content={
+      <List
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <ListItem>
+          "B" should have a length of at least 3
+        </ListItem>
+      </List>
+    }
+  >
+    <WarningTriangleIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+    />
+  </Tooltip>
+</InputGroupText>
+`;
+
+exports[`Validation Utils show list validation errors should render correctly 2`] = `
+<InputGroupText>
+  <Tooltip
+    content={
+      <List
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <ListItem>
+          "B" should start with "A"
+        </ListItem>
+      </List>
+    }
+  >
+    <WarningTriangleIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+    />
+  </Tooltip>
+</InputGroupText>
+`;
+
+exports[`Validation Utils show list validation errors should render correctly 3`] = `
+<InputGroupText>
+  <Tooltip
+    content={
+      <List
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <ListItem>
+          "B" should start with "A"
+        </ListItem>
+        <ListItem>
+          "B" should have a length of at least 3
+        </ListItem>
+      </List>
+    }
+  >
+    <WarningTriangleIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+    />
+  </Tooltip>
+</InputGroupText>
+`;
+
+exports[`Validation Utils show validation errors should render correctly 1`] = `
+<InputGroupText>
+  <Tooltip
+    content={
+      <List
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <ListItem>
+          "B" should have a length of at least 3
+        </ListItem>
+      </List>
+    }
+  >
+    <WarningTriangleIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+    />
+  </Tooltip>
+</InputGroupText>
+`;
+
+exports[`Validation Utils show validation errors should render correctly 2`] = `
+<InputGroupText>
+  <Tooltip
+    content={
+      <List
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <ListItem>
+          "B" should start with "A"
+        </ListItem>
+      </List>
+    }
+  >
+    <WarningTriangleIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+    />
+  </Tooltip>
+</InputGroupText>
+`;
+
+exports[`Validation Utils show validation errors should render correctly 3`] = `
+<InputGroupText>
+  <Tooltip
+    content={
+      <List
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        <ListItem>
+          "B" should start with "A"
+        </ListItem>
+        <ListItem>
+          "B" should have a length of at least 3
+        </ListItem>
+      </List>
+    }
+  >
+    <WarningTriangleIcon
+      color="currentColor"
+      noVerticalAlign={false}
+      size="sm"
+    />
+  </Tooltip>
+</InputGroupText>
+`;

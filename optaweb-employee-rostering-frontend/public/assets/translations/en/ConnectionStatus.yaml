@@ -1,0 +1,3 @@
+cannotConnect: No connection to server
+cannotConnectMsg:
+  Unable to connect to the planning backend. Please check your network connection.

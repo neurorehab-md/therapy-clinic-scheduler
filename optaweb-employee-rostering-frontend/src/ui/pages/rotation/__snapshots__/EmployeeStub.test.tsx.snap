@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditEmployeeStubListModal component should render correctly 1`] = `
+<Modal
+  actions={
+    Array [
+      <Button
+        onClick={[MockFunction]}
+        variant="secondary"
+      >
+        Cancel
+      </Button>,
+      <Button
+        isDisabled={false}
+        onClick={[Function]}
+        variant="primary"
+      >
+        Save
+      </Button>,
+    ]
+  }
+  appendTo={[Function]}
+  aria-describedby=""
+  aria-label=""
+  aria-labelledby=""
+  className=""
+  hasNoBodyWrapper={false}
+  isOpen={true}
+  onClose={[MockFunction]}
+  ouiaSafe={true}
+  showClose={true}
+  title="Trans(i18nKey=editEmployeeStubList)"
+  titleIconVariant={null}
+  titleLabel=""
+  variant="small"
+>
+  <Flex
+    direction={
+      Object {
+        "default": "column",
+      }
+    }
+  >
+    <FlexItem
+      key="uuid-1"
+    >
+      <Split>
+        <SplitItem>
+          <InputGroup>
+            <InputGroupText>
+              <UserIcon
+                color="currentColor"
+                noVerticalAlign={false}
+                size="sm"
+              />
+            </InputGroupText>
+            <span
+              style={
+                Object {
+                  "width": "200px",
+                }
+              }
+            >
+              <TypeaheadSelectInput
+                autoSize={false}
+                emptyText="Trans(i18nKey=selectAnEmployee)"
+                onChange={[Function]}
+                optionToStringMap={[Function]}
+                options={
+                  Array [
+                    Object {
+                      "color": "#FFFFFF",
+                      "contract": Object {
+                        "id": 5,
+                        "maximumMinutesPerDay": 10,
+                        "maximumMinutesPerMonth": 500,
+                        "maximumMinutesPerWeek": 70,
+                        "maximumMinutesPerYear": 6000,
+                        "name": "Basic Contract",
+                        "tenantId": 0,
+                        "version": 0,
+                      },
+                      "id": 4,
+                      "name": "Employee 1",
+                      "shortId": "e1",
+                      "skillProficiencySet": Array [],
+                      "tenantId": 0,
+                      "version": 0,
+                    },
+                    Object {
+                      "color": "#000000",
+                      "contract": Object {
+                        "id": 5,
+                        "maximumMinutesPerDay": 10,
+                        "maximumMinutesPerMonth": 500,
+                        "maximumMinutesPerWeek": 70,
+                        "maximumMinutesPerYear": 6000,
+                        "name": "Basic Contract",
+                        "tenantId": 0,
+                        "version": 0,
+                      },
+                      "id": 5,
+                      "name": "Employee 2",
+                      "shortId": "e2",
+                      "skillProficiencySet": Array [],
+                      "tenantId": 0,
+                      "version": 0,
+                    },
+                  ]
+                }
+                value={
+                  Object {
+                    "color": "#FFFFFF",
+                    "contract": Object {
+                      "id": 5,
+                      "maximumMinutesPerDay": 10,
+                      "maximumMinutesPerMonth": 500,
+                      "maximumMinutesPerWeek": 70,
+                      "maximumMinutesPerYear": 6000,
+                      "name": "Basic Contract",
+                      "tenantId": 0,
+                      "version": 0,
+                    },
+                    "id": 4,
+                    "name": "Employee 1",
+                    "shortId": "e1",
+                    "skillProficiencySet": Array [],
+                    "tenantId": 0,
+                    "version": 0,
+                  }
+                }
+              />
+            </span>
+          </InputGroup>
+        </SplitItem>
+        <SplitItem
+          isFilled={true}
+        >
+          <span />
+        </SplitItem>
+        <SplitItem>
+          <Button
+            onClick={[Function]}
+            variant="link"
+          >
+            <TrashIcon
+              color="currentColor"
+              noVerticalAlign={false}
+              size="sm"
+            />
+          </Button>
+        </SplitItem>
+      </Split>
+    </FlexItem>
+    <FlexItem>
+      <Button
+        onClick={[Function]}
+        variant="link"
+      >
+        + Trans(i18nKey=addEmployee)
+      </Button>
+    </FlexItem>
+  </Flex>
+</Modal>
+`;
+
+exports[`EmployeeNickName Component It should render correctly with an employee 1`] = `
+<Bullseye
+  style={
+    Object {
+      "color": "black",
+    }
+  }
+>
+  <Text>
+    e1
+  </Text>
+</Bullseye>
+`;
+
+exports[`EmployeeNickName Component It should render correctly without an employee 1`] = `
+<Bullseye
+  style={
+    Object {
+      "color": "gray",
+    }
+  }
+>
+  <Text />
+</Bullseye>
+`;
+
+exports[`EmployeeStub Component It should render correctly with an employee 1`] = `
+<button
+  className="pf-c-button"
+  onClick={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FF0000",
+      "color": "white",
+      "cursor": "pointer",
+      "display": "flex",
+      "height": "50px",
+      "marginTop": "10px",
+      "outline": "1px solid black",
+      "overflow": "hidden",
+      "textOrientation": "upright",
+      "width": "30px",
+      "writingMode": "vertical-rl",
+    }
+  }
+  title="Employee 1"
+  type="button"
+>
+  <EmployeeNickName
+    employee={
+      Object {
+        "color": "#FFFFFF",
+        "contract": Object {
+          "id": 5,
+          "maximumMinutesPerDay": 10,
+          "maximumMinutesPerMonth": 500,
+          "maximumMinutesPerWeek": 70,
+          "maximumMinutesPerYear": 6000,
+          "name": "Basic Contract",
+          "tenantId": 0,
+          "version": 0,
+        },
+        "id": 4,
+        "name": "Employee 1",
+        "shortId": "e1",
+        "skillProficiencySet": Array [],
+        "tenantId": 0,
+        "version": 0,
+      }
+    }
+  />
+</button>
+`;
+
+exports[`EmployeeStub Component It should render correctly without an employee 1`] = `
+<button
+  className="pf-c-button"
+  onClick={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FF0000",
+      "color": "white",
+      "cursor": "pointer",
+      "display": "flex",
+      "height": "50px",
+      "marginTop": "10px",
+      "outline": "1px solid black",
+      "overflow": "hidden",
+      "textOrientation": "upright",
+      "width": "30px",
+      "writingMode": "vertical-rl",
+    }
+  }
+  title="Trans(i18nKey=noShift)"
+  type="button"
+>
+  <EmployeeNickName
+    employee={null}
+  />
+</button>
+`;
+
+exports[`EmployeeStubList Component should render correctly 1`] = `
+<Fragment>
+  <Flex
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <FlexItem>
+      <UsersIcon
+        color="currentColor"
+        noVerticalAlign={false}
+        size="sm"
+      />
+    </FlexItem>
+    <FlexItem>
+      <Text>
+        Trans(i18nKey=employeeStub)
+      </Text>
+    </FlexItem>
+    <FlexItem>
+      <Flex>
+        <FlexItem>
+          <EmployeeStub
+            color="gray"
+            employee="NO_SHIFT"
+            isSelected={false}
+            onClick={[Function]}
+          />
+        </FlexItem>
+        <FlexItem>
+          <EmployeeStub
+            color="#FFFFFF"
+            employee="SHIFT_WITH_NO_EMPLOYEE"
+            isSelected={false}
+            onClick={[Function]}
+          />
+        </FlexItem>
+        <GridItem
+          key="4"
+        >
+          <EmployeeStub
+            color="#FFFFFF"
+            employee={
+              Object {
+                "color": "#FFFFFF",
+                "contract": Object {
+                  "id": 5,
+                  "maximumMinutesPerDay": 10,
+                  "maximumMinutesPerMonth": 500,
+                  "maximumMinutesPerWeek": 70,
+                  "maximumMinutesPerYear": 6000,
+                  "name": "Basic Contract",
+                  "tenantId": 0,
+                  "version": 0,
+                },
+                "id": 4,
+                "name": "Employee 1",
+                "shortId": "e1",
+                "skillProficiencySet": Array [],
+                "tenantId": 0,
+                "version": 0,
+              }
+            }
+            isSelected={true}
+            onClick={[Function]}
+          />
+        </GridItem>
+        <GridItem
+          key="5"
+        >
+          <EmployeeStub
+            color="#000000"
+            employee={
+              Object {
+                "color": "#000000",
+                "contract": Object {
+                  "id": 5,
+                  "maximumMinutesPerDay": 10,
+                  "maximumMinutesPerMonth": 500,
+                  "maximumMinutesPerWeek": 70,
+                  "maximumMinutesPerYear": 6000,
+                  "name": "Basic Contract",
+                  "tenantId": 0,
+                  "version": 0,
+                },
+                "id": 5,
+                "name": "Employee 2",
+                "shortId": "e2",
+                "skillProficiencySet": Array [],
+                "tenantId": 0,
+                "version": 0,
+              }
+            }
+            isSelected={false}
+            onClick={[Function]}
+          />
+        </GridItem>
+      </Flex>
+    </FlexItem>
+    <FlexItem>
+      <Button
+        onClick={[Function]}
+        variant="link"
+      >
+        Trans(i18nKey=editEmployeeStubList)
+         
+        <EditIcon
+          color="currentColor"
+          noVerticalAlign={false}
+          size="sm"
+        />
+      </Button>
+    </FlexItem>
+  </Flex>
+  <EditEmployeeStubListModal
+    currentStubList={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "contract": Object {
+            "id": 5,
+            "maximumMinutesPerDay": 10,
+            "maximumMinutesPerMonth": 500,
+            "maximumMinutesPerWeek": 70,
+            "maximumMinutesPerYear": 6000,
+            "name": "Basic Contract",
+            "tenantId": 0,
+            "version": 0,
+          },
+          "id": 4,
+          "name": "Employee 1",
+          "shortId": "e1",
+          "skillProficiencySet": Array [],
+          "tenantId": 0,
+          "version": 0,
+        },
+        Object {
+          "color": "#000000",
+          "contract": Object {
+            "id": 5,
+            "maximumMinutesPerDay": 10,
+            "maximumMinutesPerMonth": 500,
+            "maximumMinutesPerWeek": 70,
+            "maximumMinutesPerYear": 6000,
+            "name": "Basic Contract",
+            "tenantId": 0,
+            "version": 0,
+          },
+          "id": 5,
+          "name": "Employee 2",
+          "shortId": "e2",
+          "skillProficiencySet": Array [],
+          "tenantId": 0,
+          "version": 0,
+        },
+      ]
+    }
+    isVisible={false}
+    onClose={[Function]}
+    onUpdateStubList={[MockFunction]}
+  />
+</Fragment>
+`;

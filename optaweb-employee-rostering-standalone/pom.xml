@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.optaweb.employeerostering</groupId>
+    <artifactId>optaweb-employee-rostering</artifactId>
+    <version>8.19.0.Final</version>
+  </parent>
+
+  <artifactId>optaweb-employee-rostering-standalone</artifactId>
+  <packaging>jar</packaging>
+
+  <name>OptaWeb Employee Rostering as a Service Standalone</name>
+
+  <properties>
+    <application.port>8180</application.port>
+    <frontend.project.name>optaweb-employee-rostering-frontend</frontend.project.name>
+    <java.module.name>org.optaweb.employeerostering</java.module.name>
+    <version.cypress.docker>4.12.1</version.cypress.docker>
+    <!-- Override to run with Podman -->
+    <container.runtime>docker</container.runtime>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-undertow</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.optaweb.employeerostering</groupId>
+      <artifactId>optaweb-employee-rostering-backend</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.optaweb.employeerostering</groupId>
+      <artifactId>optaweb-employee-rostering-frontend</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.optaweb.employeerostering</groupId>
+      <artifactId>optaweb-employee-rostering-frontend</artifactId>
+      <type>zip</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.optaweb.employeerostering</groupId>
+                  <artifactId>optaweb-employee-rostering-frontend</artifactId>
+                  <type>zip</type>
+                  <outputDirectory>${project.build.outputDirectory}/META-INF/resources</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>io.quarkus</groupId>
+        <artifactId>quarkus-maven-plugin</artifactId>
+        <version>${version.io.quarkus}</version>
+        <extensions>true</extensions>
+        <executions>
+          <execution>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>package-quarkus-app</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <descriptors>
+                <descriptor>src/main/assembly/assembly-optaweb-employee-rostering-quarkus-app.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>integration-tests</id>
+      <activation>
+        <property>
+          <name>integration-tests</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>com.bazaarvoice.maven.plugins</groupId>
+              <artifactId>process-exec-maven-plugin</artifactId>
+              <version>0.9</version>
+              <configuration>
+              <skip>${skipITs}</skip>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+        <plugins>
+          <plugin> <!-- Start the application as a separate process -->
+            <groupId>com.bazaarvoice.maven.plugins</groupId>
+            <artifactId>process-exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>start-backend-service</id>
+                <phase>pre-integration-test</phase>
+                <goals>
+                  <goal>start</goal>
+                </goals>
+                <configuration>
+                  <name>Run application</name>
+                  <healthcheckUrl>http://localhost:${application.port}</healthcheckUrl>
+                  <workingDir>${project.build.directory}/quarkus-app</workingDir>
+                  <processLogFile>${project.build.directory}/${project.artifactId}.log</processLogFile>
+                  <arguments>
+                    <argument>java</argument>
+                    <argument>-Dquarkus.http.port=${application.port}</argument>
+                    <argument>-jar</argument>
+                    <argument>quarkus-run.jar</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+              <!-- Kill all running processes -->
+              <execution>
+                <id>stop-running-processes</id>
+                <phase>post-integration-test</phase>
+                <goals>
+                  <goal>stop-all</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- Run Cypress tests in a docker container.
+                   See https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command -->
+          <plugin>
+            <artifactId>exec-maven-plugin</artifactId>
+            <groupId>org.codehaus.mojo</groupId>
+            <executions>
+              <execution>
+                <id>run-cypress-tests</id>
+                <phase>integration-test</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <skip>${skipITs}</skip>
+                  <executable>${container.runtime}</executable>
+                  <arguments>
+                    <argument>run</argument>
+                    <argument>--network=host</argument> <!-- Cypress accesses UI running on the host -->
+                    <argument>-v</argument>
+                    <argument>${project.parent.basedir}/${frontend.project.name}:/e2e:Z</argument>
+                    <argument>-w</argument>
+                    <argument>/e2e</argument>
+                    <argument>${user.flag}</argument>
+                    <argument>${user.name.group}</argument>
+                    <argument>--entrypoint</argument>
+                    <argument>cypress</argument>
+                    <argument>cypress/included:${version.cypress.docker}</argument>
+                    <argument>run</argument> <!-- Executing cypress:run -->
+                    <argument>--project</argument>
+                    <argument>.</argument>
+                    <argument>--config</argument>
+                    <argument>baseUrl=http://localhost:${application.port}</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+    <id>docker</id>
+    <activation>
+      <property>
+        <name>container.runtime</name>
+        <value>docker</value>
+      </property>
+    </activation>
+    <properties>
+      <user.flag>--user</user.flag>
+      <user.name.group>1000:1000</user.name.group>
+    </properties>
+    </profile>
+  </profiles>
+</project>

@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventWrapper should render correctly when the event continues both before and after 1`] = `
+<div
+  className="class continues-from-previous-day continues-next-day"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "white",
+      "height": "100%",
+      "top": "0%",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;
+
+exports[`EventWrapper should render correctly when the event continues from earlier 1`] = `
+<div
+  className="class continues-from-previous-day"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "white",
+      "height": "25%",
+      "top": "0%",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;
+
+exports[`EventWrapper should render correctly when the event continues later 1`] = `
+<div
+  className="class continues-next-day"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "white",
+      "height": "25%",
+      "top": "75%",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;
+
+exports[`EventWrapper should render correctly when the event does not have a class name 1`] = `
+<div
+  className=""
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "white",
+      "height": "25%",
+      "top": "50%",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;
+
+exports[`EventWrapper should render correctly when the event does not span multiple days 1`] = `
+<div
+  className="class"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "white",
+      "height": "25%",
+      "top": "50%",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;
+
+exports[`EventWrapper should render correctly when the event has no height or top 1`] = `
+<div
+  className="class"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "white",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;
+
+exports[`EventWrapper should render correctly without a style 1`] = `
+<div
+  className="class"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;

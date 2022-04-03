@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schedule wrapper component should defer to prop 1`] = `
+<div
+  className="class continues-next-day"
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "border": "none",
+      "color": "red",
+      "height": "67%",
+      "top": "33%",
+      "xOffset": 0,
+    }
+  }
+>
+  <Popover
+    bodyContent="Body"
+    headerContent="Title"
+    zIndex={1000001}
+  />
+</div>
+`;

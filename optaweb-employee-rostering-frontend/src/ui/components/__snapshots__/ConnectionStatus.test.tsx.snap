@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectionStatus component should render correctly when connected 1`] = `
+<Modal
+  actions={Array []}
+  appendTo={[Function]}
+  aria-describedby=""
+  aria-label=""
+  aria-labelledby=""
+  className=""
+  hasNoBodyWrapper={false}
+  isOpen={false}
+  onClose={[Function]}
+  ouiaSafe={true}
+  showClose={true}
+  title="Trans(i18nKey=cannotConnect)"
+  titleIconVariant={null}
+  titleLabel=""
+  variant="small"
+>
+  <TextContent>
+    <Text
+      component="h3"
+    >
+      <UnpluggedIcon
+        color="currentColor"
+        noVerticalAlign={false}
+        size="sm"
+      />
+      Trans(i18nKey=cannotConnectMsg)
+    </Text>
+  </TextContent>
+</Modal>
+`;
+
+exports[`ConnectionStatus component should render correctly when not connected 1`] = `
+<Modal
+  actions={Array []}
+  appendTo={[Function]}
+  aria-describedby=""
+  aria-label=""
+  aria-labelledby=""
+  className=""
+  hasNoBodyWrapper={false}
+  isOpen={true}
+  onClose={[Function]}
+  ouiaSafe={true}
+  showClose={true}
+  title="Trans(i18nKey=cannotConnect)"
+  titleIconVariant={null}
+  titleLabel=""
+  variant="small"
+>
+  <TextContent>
+    <Text
+      component="h3"
+    >
+      <UnpluggedIcon
+        color="currentColor"
+        noVerticalAlign={false}
+        size="sm"
+      />
+      Trans(i18nKey=cannotConnectMsg)
+    </Text>
+  </TextContent>
+</Modal>
+`;

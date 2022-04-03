@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker component should render correctly 1`] = `
+<Popover
+  aria-label="Select Color..."
+  bodyContent={
+    <ColorPicker
+      color="#ff0000"
+      colors={
+        Array [
+          "#7D1007",
+          "#A30000",
+          "#C9190B",
+          "#2B9AF3",
+          "#73BCF7",
+          "#BEE1F4",
+          "#F4C145",
+          "#F6D173",
+          "#F9E0A2",
+          "#EC7A08",
+          "#EF9234",
+          "#F4B678",
+          "#6EC664",
+          "#95D58E",
+          "#BDE5B8",
+          "#A18FFF",
+          "#B2A3FF",
+          "#CBC1FF",
+          "#A2D9D9",
+          "#73C5C5",
+          "#009596",
+        ]
+      }
+      onChange={[Function]}
+      styles={Object {}}
+      triangle="hide"
+      width={170}
+    />
+  }
+  isVisible={false}
+  shouldClose={[Function]}
+>
+  <Button
+    onClick={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#ff0000",
+        "color": "white",
+        "width": "100%",
+      }
+    }
+  >
+    #ff0000
+  </Button>
+</Popover>
+`;

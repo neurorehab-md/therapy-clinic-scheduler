@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+  <id>sources</id>
+  <formats>
+    <format>dir</format>
+    <format>zip</format>
+  </formats>
+
+  <includeBaseDirectory>true</includeBaseDirectory>
+
+  <files>
+    <file>
+      <source>../LICENSE.txt</source>
+      <outputDirectory/>
+    </file>
+    <file>
+      <source>src/main/resources/README.txt</source>
+      <outputDirectory/>
+    </file>
+    <file>
+      <source>../runLocally.sh</source>
+      <outputDirectory>bin</outputDirectory>
+      <filtered>true</filtered>
+    </file>
+  </files>
+  <fileSets>
+    <fileSet><!-- Note: going outside the module dir is bad, but it is not fetching generated files -->
+      <useDefaultExcludes>false</useDefaultExcludes>
+      <directory>..</directory>
+      <outputDirectory>sources</outputDirectory>
+      <excludes>
+        <exclude>**/target/**</exclude>
+        <exclude>**/local/**</exclude>
+        <exclude>**/.project</exclude>
+        <exclude>**/.idea/**</exclude>
+        <exclude>**/*.ipr</exclude>
+        <exclude>**/*.iws</exclude>
+        <exclude>**/*.iml</exclude>
+        <exclude>**/nbproject/**</exclude>
+        <exclude>**/.vscode/**</exclude>
+        <exclude>**/.DS_Store</exclude>
+        <exclude>.git/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/.scannerwork/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/build/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/coverage/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/cypress/screenshots/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/cypress/videos/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/docker/build/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/node/**</exclude>
+        <exclude>optaweb-employee-rostering-frontend/node_modules/**</exclude>
+        <!--
+          TODO: Fix Jenkins jobs that build and deploy snapshots not to clone upstream repositories
+          TODO: under the root of the target repository.
+        -->
+        <exclude>upstream-repos/**</exclude>
+      </excludes>
+    </fileSet>
+  </fileSets>
+
+  <dependencySets>
+    <dependencySet>
+      <includes>
+        <include>org.optaweb.employeerostering:optaweb-employee-rostering-standalone:zip:quarkus-app</include>
+      </includes>
+      <outputDirectory>bin</outputDirectory>
+      <unpack>true</unpack>
+      <useStrictFiltering>true</useStrictFiltering>
+      <useProjectArtifact>false</useProjectArtifact>
+    </dependencySet>
+    <dependencySet>
+      <includes>
+        <include>org.optaweb.employeerostering:optaweb-employee-rostering-docs:zip</include>
+      </includes>
+      <outputDirectory>reference_manual</outputDirectory>
+      <unpack>true</unpack>
+      <!-- Don't include the artifact produced during the current project's build. -->
+      <useProjectArtifact>false</useProjectArtifact>
+      <!-- Fail the build if any include/exclude patterns aren't used to filter an actual artifact. -->
+      <useStrictFiltering>true</useStrictFiltering>
+    </dependencySet>
+  </dependencySets>
+
+</assembly>

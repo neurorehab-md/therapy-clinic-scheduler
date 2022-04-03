@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App clicking the nav button should show the sidebar 1`] = `
+<Page
+  defaultManagedSidebarIsOpen={true}
+  header={
+    <Header
+      onNavToggle={[Function]}
+    />
+  }
+  isBreadcrumbWidthLimited={false}
+  isManagedSidebar={false}
+  isNotificationDrawerExpanded={false}
+  mainTabIndex={-1}
+  onNotificationDrawerExpand={[Function]}
+  onPageResize={[Function]}
+  sidebar={
+    <PageSidebar
+      isNavOpen={true}
+      nav={
+        <UNDEFINED
+          variant="default"
+        />
+      }
+    />
+  }
+>
+  <Background />
+  <ConnectionStatus />
+  <PageSection
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100%",
+        "overflowY": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <Connect(Alerts) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/skills"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/spots"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/contracts"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/employees"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/shift"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/adjust"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/availability"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/rotation"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/admin"
+      />
+    </Switch>
+  </PageSection>
+</Page>
+`;
+
+exports[`App clicking the nav button twice should hide the sidebar 1`] = `
+<Page
+  defaultManagedSidebarIsOpen={true}
+  header={
+    <Header
+      onNavToggle={[Function]}
+    />
+  }
+  isBreadcrumbWidthLimited={false}
+  isManagedSidebar={false}
+  isNotificationDrawerExpanded={false}
+  mainTabIndex={-1}
+  onNotificationDrawerExpand={[Function]}
+  onPageResize={[Function]}
+  sidebar={
+    <PageSidebar
+      isNavOpen={false}
+      nav={
+        <UNDEFINED
+          variant="default"
+        />
+      }
+    />
+  }
+>
+  <Background />
+  <ConnectionStatus />
+  <PageSection
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100%",
+        "overflowY": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <Connect(Alerts) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/skills"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/spots"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/contracts"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/employees"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/shift"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/adjust"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/availability"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/rotation"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/admin"
+      />
+    </Switch>
+  </PageSection>
+</Page>
+`;
+
+exports[`App should render correctly on a desktop 1`] = `
+<Page
+  defaultManagedSidebarIsOpen={true}
+  header={
+    <Header
+      onNavToggle={[Function]}
+    />
+  }
+  isBreadcrumbWidthLimited={false}
+  isManagedSidebar={false}
+  isNotificationDrawerExpanded={false}
+  mainTabIndex={-1}
+  onNotificationDrawerExpand={[Function]}
+  onPageResize={[Function]}
+  sidebar={
+    <PageSidebar
+      isNavOpen={false}
+      nav={
+        <UNDEFINED
+          variant="default"
+        />
+      }
+    />
+  }
+>
+  <Background />
+  <ConnectionStatus />
+  <PageSection
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100%",
+        "overflowY": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <Connect(Alerts) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/skills"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/spots"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/contracts"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/employees"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/shift"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/adjust"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/availability"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/rotation"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/admin"
+      />
+    </Switch>
+  </PageSection>
+</Page>
+`;
+
+exports[`App should render correctly on a mobile 1`] = `
+<Page
+  defaultManagedSidebarIsOpen={true}
+  header={
+    <Header
+      onNavToggle={[Function]}
+    />
+  }
+  isBreadcrumbWidthLimited={false}
+  isManagedSidebar={false}
+  isNotificationDrawerExpanded={false}
+  mainTabIndex={-1}
+  onNotificationDrawerExpand={[Function]}
+  onPageResize={[Function]}
+  sidebar={
+    <PageSidebar
+      isNavOpen={false}
+      nav={
+        <UNDEFINED
+          variant="default"
+        />
+      }
+    />
+  }
+>
+  <Background />
+  <ConnectionStatus />
+  <PageSection
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100%",
+        "overflowY": "auto",
+        "position": "relative",
+      }
+    }
+  >
+    <Connect(Alerts) />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/skills"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/spots"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/contracts"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/employees"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/shift"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/adjust"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/availability"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/:tenantId/rotation"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/admin"
+      />
+    </Switch>
+  </PageSection>
+</Page>
+`;
